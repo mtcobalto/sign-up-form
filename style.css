@@ -1,0 +1,89 @@
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('fonts/Quicksand-Regular.woff2') format('woff2'),
+        url('fonts/Quicksand-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Quicksand', sans-serif, system-ui;
+}
+
+body{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.img-container, .form-container{
+    position: relative;
+    height: 900px;
+    width: 40%;
+}
+
+.form-container{
+width: 60%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 243, 244);
+}
+
+button{
+    border-style: none;
+    padding: 10px 30px;
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black; ;
+
+}
+
+
+#galaxy{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+#top,#middle,#bottom{
+    height: 300px;
+    padding-left: 50px;
+}
+
+#top{
+    padding-top:13% ;
+    font-size: 1.3rem;
+    font-weight: 800; 
+}
+#middle{
+    background-color: white;
+
+}
+
+#bottom{
+    padding-top: 30px;
+}
+
+
+#logo-div{
+    position: absolute ;
+    top: 200px;
+    width: 100%;
+    background-color: rgb(240, 248, 255,0.6);
+    color: black;
+    font-size: 6rem;
+    font-weight: 900;
+}
