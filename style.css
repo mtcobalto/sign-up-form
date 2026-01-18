@@ -8,13 +8,39 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Rock Salt';
+    src: url('fonts/RockSalt-Regular.woff2') format('woff2'),
+        url('fonts/RockSalt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('Oswald-Regular.woff2') format('woff2'),
+        url('Oswald-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Thin.woff2') format('woff2'),
+        url('fonts/JosefinSans-Thin.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
-  box-sizing: border-box;
-  padding: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 html, body{
     height: 100%;
+    margin: 0;
     font-family: 'Quicksand', sans-serif, system-ui;
 }
 
@@ -23,32 +49,62 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
+
+}
+
+div{
+    flex-wrap: wrap;
 }
 
 .img-container, .form-container{
     position: relative;
-    height: 900px;
+    height: 1050px;
     width: 40%;
+    flex: auto;
 }
 
+.img-container{
+    overflow: clip;
+}
 .form-container{
-width: 60%;
+    width: 60%;
 }
 
 form{
     display: flex;
     flex-direction: column;
     background-color: rgb(245, 243, 244);
+    height: 100%;
+}
+
+input{
+    appearance: none;
+    border:1px solid #e5e8ee;
+    border-radius: 5px;
+    height: 1.9rem;
+    width: 220px;
+    margin-right: 50px;
+    padding: 5px;
 }
 
 button{
     border-style: none;
-    padding: 10px 30px;
+    padding: 12px 34px;
     background-color: rebeccapurple;
     color: white;
     border-radius: 8px;
-    box-shadow: 2px 2px 2px black; ;
+    box-shadow: 2px 2px 2px black;
+    font-size: 1.2rem;
+    font-family: 'Oswald', system-ui;
+}
 
+button:hover{
+ opacity: 0.8;
+ cursor: pointer;
+}
+
+button:active{
+    opacity: 0.6;
 }
 
 
@@ -56,25 +112,28 @@ button{
     position: relative;
     overflow: hidden;
     height: 100%;
+    width: auto;
 }
 
 #top,#middle,#bottom{
-    height: 300px;
+    height: 350px;
     padding-left: 50px;
+    padding-right: 50px;
 }
 
 #top{
-    padding-top:13% ;
+    padding-top:100px ;
     font-size: 1.3rem;
     font-weight: 800; 
 }
 #middle{
+    display: flex;
     background-color: white;
-
+    box-shadow: 2px 0px 10px gray;
 }
 
 #bottom{
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
 
@@ -82,8 +141,116 @@ button{
     position: absolute ;
     top: 200px;
     width: 100%;
-    background-color: rgb(240, 248, 255,0.6);
-    color: black;
+
+    background-color: rgba(1, 18, 32, 0.6);
+    color: white;
     font-size: 6rem;
+    font-family:'Rock Salt' ;
     font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-div{
+    position: absolute ;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+h2{
+    width: 100%;
+    margin-bottom: 0;
+}
+
+input[type="password"]:invalid{
+    border: 1px solid red;
+    background-color: #ffdddd;
+
+}
+
+
+
+input:valid{
+    background-color: rgb(235, 252, 211);
+    border: 1px solid rgb(159, 252, 21);
+}
+
+
+
+#rocket{
+    height: 150px;
+}
+
+input + span {
+  position: relative;
+}
+input:required + span::after {
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: absolute;
+  content: "required";
+  color:red;
+  top: -20px;
+  left: -95px;
+}
+
+input:valid + span::after {
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: absolute;
+  content: "valid";
+  color:rgb(111, 180, 7);
+  top: -20px;
+  left: -78px;
+}
+
+input[type="tel"] + span::after {
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: absolute;
+  content: "optional";
+  color:rgb(23, 24, 23);
+  top: -20px;
+  left: -90px;
+}
+
+::placeholder{
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+a:link{
+    text-decoration: none;
+    font-weight: 900;
+}
+
+a:hover{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+input:focus{
+    border: 1px solid blue;
+    box-shadow: 2px 2px 5px black;
+}
+
+#small{
+    font-size: .7rem;
+    font-family: 'Josefin Sans';
+    font-weight: 900;
+}
+
+
+#linka, #linkb{
+    color: white;
 }

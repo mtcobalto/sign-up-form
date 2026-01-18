@@ -9,12 +9,14 @@
 <body>
     <div class="img-container">
         <img src="img/galaxy.jpg" alt="Galaxy" id="galaxy">
-        <div id="logo-div">OJOJOJP</div>
+        <div id="logo-div"> <img src="img/rocket.svg" alt="rocket" id="rocket"> Odin</div>
+        <div id="text-div">Image by &nbsp; <a href="https://us.idyllic.app/gen/stunning-pixel-art-scene-228579" id="linka"> zany-brace </a>&nbsp; on  &nbsp;
+        <a href="https://us.idyllic.app/" id="linkb">  Idylic</a></div>
     </div>
     <div class="form-container">
         <form action="">
             <div id="top">
-                <p>Hola mis chamos como están. This is not a real online service!
+                <p>Hola qué tal, cómo estás? This is not a real online service!
                     You know you need something like this in your life to help you 
                     realize your deepest dreams. Sig up <em>now</em> to get started.
                 </p>
@@ -25,33 +27,39 @@
                 <h2>Let's do this!</h2>
                 
                 <div>
-                    <label for="first-name">First Name : </label>
-                    <input type="text" name="first-name"> <span></span>
+                    <label for="first-name">First Name : </label><br>
+                    <input type="text" name="first-name" required minlength="2" placeholder="Aquiles"> 
+                    <span></span>
                 </div>
                 <div>
-                    <label for="first-name">Last Name : </label>
-                    <input type="text" name="last-name">
+                    <label for="last-name">Last Name : </label> <br>
+                    <input type="text" name="last-name" required minlength="2" placeholder="Bailo">
+                    <span></span>
                 </div>
                 <div>
-                    <label for="first-name">E-mail : </label>
-                    <input type="text" name="user-email">
+                    <label for="user-email">E-mail : </label> <br>
+                    <input type="email" name="user-email" required placeholder="aquiles@traigo.otra">
+                    <span></span>
                 </div>
                 <div>
-                    <label for="first-name">Phone Number : </label>
-                    <input type="text" name="user-phone">
+                    <label for="user-phone">Phone Number : </label> <br>
+                    <input type="tel" name="user-phone" placeholder="555-555-556" minlength="8" >
+                    <span></span>
                 </div>
                 <div>
-                    <label for="first-name">Password : </label>
-                    <input type="text" name="user-pwd">
+                    <label for="user-pwd"  >Password <span id="small">(8 characters)</span> : </label> <br>
+                    <input type="password"  name="user-pwd" minlength="8" required>
+                    <span></span>
                 </div>
                 <div>
-                    <label for="first-name">Confirm Password : </label>
-                    <input type="text" name="user-pwd-confirm">
+                    <label for="user-pwd-confirm" >Confirm Password : </label> <br>
+                    <input type="password"  name="user-pwd-confirm" minlength="8" required>
+                    <span></span>
                 </div>
             </div>
 
             <div id="bottom"><button>Create Account</button>
-            <p>Already have an account? <a href="">Log In</a></p></div>
+            <p>Already have an account? <a href="https://media.makeameme.org/created/get-scammed-d67949be4b.jpg">Log In</a></p></div>
         </form>
     </div>
 </body>
